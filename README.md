@@ -1,2 +1,3 @@
-# gradle-setup
-Gradle Setup Hello World
+#Hello World to Gradle
+
+Welcome to Gradle setup
