@@ -10,7 +10,7 @@ plugins {
 
 group = 'com.abdus.tutorial'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -18,8 +18,12 @@ configurations {
 	}
 }
 
-repositories {
+/*repositories {
 	mavenCentral()
+}*/
+
+repositories {
+  jcenter()
 }
 
 ext {
@@ -40,6 +44,16 @@ dependencies {
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
   implementation 'org.codehaus.groovy:groovy-all:2.4.15'
   testImplementation 'org.codehaus.groovy:groovy-all:2.4.15'
+
+  testCompile(
+    'junit:junit:4.12',
+    'org.codehaus.groovy:groovy-all:2.4.15',
+    'org.spockframework:spock-core:1.0-groovy-2.4'
+  )
+
+  testRuntime(
+    'com.athaydes:spock-reports:1.2.7'
+  )
 
 }
 
